@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es6",
+    "module": "commonjs",
+
+    "sourceMap": true,
     "lib": ["ES2020"],
+
+    "strictPropertyInitialization": false,
     "outDir": "out",
     "rootDir": "src",
-    "sourceMap": true,
-    "strictPropertyInitialization": false,
     "declaration": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -14,10 +16,6 @@
     "esModuleInterop": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", ".vscode-test", "_code-dep"],
-  "references": [
-    { "path": "./client" },
-    { "path": "./server" },
-    { "path": "./tests" }
-  ]
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./server" }]
 }
